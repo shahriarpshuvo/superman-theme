@@ -1,0 +1,44 @@
+/*============================
+  Medium Screen: Below 1024px
+==============================*/
+@media only screen and (max-width: 1024px) {
+  .header-nav nav.header-nav__menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-light);
+    top: 7rem;
+    bottom: 0;
+    right: 0;
+    padding: 2rem 4rem 0 8rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .header-nav nav ul {
+    flex-direction: column;
+    align-items: unset;
+  }
+  
+  .header-nav nav ul li {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .header-nav .nav-button a{
+    display: inline;
+  }
+}
+
+/*==========================
+  Small Screen: Below 768px
+============================*/
+@media only screen and (max-width: 768px) {
+  
+}
+
+/*================================
+  Extra Small Screen: Below 480px
+==================================*/
+@media only screen and (max-width: 480px) {
+
+}

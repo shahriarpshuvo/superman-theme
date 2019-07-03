@@ -1,0 +1,99 @@
+header{
+  box-shadow: 0 0.5px 2px #efefef;
+}
+.header-box {
+  height: 7rem;
+}
+
+.header-box, .header-nav, .header-nav nav, .header-nav nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.site-logo .site-title a{
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.site-logo .site-title a i{
+  font-size: 3.2rem;
+}
+
+.header-nav ul{
+  list-style: none;
+}
+
+.header-nav ul li{
+  margin-right: 4rem;
+}
+
+.header-nav ul li a{
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.header-nav ul li a:hover{
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.header-nav .contact-me a{
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-right: 4rem;
+  text-decoration: none;
+}
+
+.header-nav .contact-me a:hover{
+  color: var(--color-primary-light);
+}
+
+.header-nav .nav-button a{
+  color: var(--color-dark);
+  font-size: 3rem;
+  text-decoration: none;
+  
+}
+
+.header-box{
+  z-index: 999;
+}
+
+nav.header-nav__menu ul li a i, nav.header-nav__menu .contact-me a i {
+  padding-right: 0.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-nav nav.header-nav__menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-light);
+    top: 7rem;
+    bottom: 0;
+    right: 0;
+    padding: 2rem 4rem 0 8rem;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 9999;
+  }
+  
+  .header-nav nav ul {
+    flex-direction: column;
+    align-items: unset;
+  }
+  
+  .header-nav nav ul li {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .header-nav .nav-button a{
+    display: inline;
+  }
+}

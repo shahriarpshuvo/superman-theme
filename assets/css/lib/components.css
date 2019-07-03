@@ -1,0 +1,40 @@
+.content-box{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.social-menu ul li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.social-menu ul li a{
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.social-menu ul li:hover{
+  background-color: var(--color-primary-light);
+}
+
+.page-banner{
+  background-color: var(--color-light);
+  padding: 3.2rem 0; 
+}
+
+.page-banner__title {
+  font-weight: 500;
+  word-spacing: 3px;
+  letter-spacing: 0.05px;
+  color: var(--color-primary);
+}
+
+.page-banner__subtitle{
+  padding-top: 5px;
+}
