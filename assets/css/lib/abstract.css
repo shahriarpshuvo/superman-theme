@@ -1,8 +1,11 @@
 :root{
-  --color-primary: #ff9900;
-  --color-primary-light: #FFCE84;
-  --color-dark: #6e6e6e;
-  --color-light: #f9f9f9;
   
-  --font-family: 'Gotham', Arial, Helvetica, sans-serif;
+  --color-main: #ee5d48;
+  --color-main-light: #f44336;
+  --color-sub: #009688;
+  --color-dark: #656565;
+  --color-darker: #444;
+  --color-light: #f9f9f9;
+  --color-bg: #fcefe9;
+  --font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
 }

@@ -1,99 +1,70 @@
-header{
-  box-shadow: 0 0.5px 2px #efefef;
+header a,
+header a:hover{
+  text-decoration: none;
 }
-.header-box {
-  height: 7rem;
-}
-
-.header-box, .header-nav, .header-nav nav, .header-nav nav ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.site-logo .site-title a{
+header a.navbar-brand #nav-title{
   color: var(--color-dark);
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.1px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.site-logo .site-title a i{
-  font-size: 3.2rem;
+header a.navbar-brand img{
+  margin: 0;
+  width: 36px;
+  padding-right: 5px;
 }
 
-.header-nav ul{
-  list-style: none;
+.nav-item{
+  padding: 0 20px;
+  transition: all .1s ease-in-out;
 }
 
-.header-nav ul li{
-  margin-right: 4rem;
+.nav-item:hover{
+  color: var(--color-sub);
 }
 
-.header-nav ul li a{
-  color: var(--color-dark);
-  text-decoration: none;
+.nav-item a i{
+  padding-right: 5px;
+}
+.btn{
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 8px 36px;
+  transition: all .1s ease-in-out;
 }
 
-.header-nav ul li a:hover{
-  color: var(--color-primary-light);
-  text-decoration: none;
+.btn i{
+  padding-left: 5px;
+}
+.btn-primary{
+  background: linear-gradient(to top left, var(--color-main), var(--color-main-light));
+  outline: none;
+  border: none;
+}
+.btn:hover{
+  opacity: 0.9;
+}
+.btn:focus {
+  outline: none;
+  border: none;
+  box-shadow:none !important;
 }
 
-.header-nav .contact-me a{
-  color: var(--color-primary);
-  font-weight: 700;
-  margin-right: 4rem;
-  text-decoration: none;
-}
+@media screen and (max-width: 992px) {
+  .navbar-collapse{
+    height: 95vh;
+    text-align: center;
+  } 
 
-.header-nav .contact-me a:hover{
-  color: var(--color-primary-light);
-}
-
-.header-nav .nav-button a{
-  color: var(--color-dark);
-  font-size: 3rem;
-  text-decoration: none;
-  
-}
-
-.header-box{
-  z-index: 999;
-}
-
-nav.header-nav__menu ul li a i, nav.header-nav__menu .contact-me a i {
-  padding-right: 0.5rem;
-}
-
-@media only screen and (max-width: 1024px) {
-  .header-nav nav.header-nav__menu {
-    display: none;
-    position: absolute;
-    background-color: var(--color-light);
-    top: 7rem;
-    bottom: 0;
-    right: 0;
-    padding: 2rem 4rem 0 8rem;
-    flex-direction: column;
-    justify-content: space-around;
-    z-index: 9999;
-  }
-  
-  .header-nav nav ul {
-    flex-direction: column;
-    align-items: unset;
-  }
-  
-  .header-nav nav ul li {
-    text-align: left;
-    margin-bottom: 3rem;
+  .navbar-collapse .navbar-nav{
+    margin-top: 20px;
   }
 
-  .header-nav .nav-button a{
-    display: inline;
+  .navbar-collapse .navbar-nav li{
+    padding: 10px;
+  }
+  .navbar-collapse .contact{
+    margin-top: 20px;
   }
 }

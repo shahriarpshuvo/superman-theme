@@ -1,0 +1,40 @@
+.home .hero-sec {
+    background-color: var(--color-bg);
+    height: 95vh;
+    position: relative;
+}
+
+.home .hero-box{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home .hero-box__img{
+    width: 40%;
+    margin-top: -50px;
+}
+.home .hero-box__title{
+    margin-top: 20px;
+    color: var(--color-sub);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.home .hero-box__text{
+    margin-top: 15px;
+    
+}
+
+.home .hero-sec__text{
+    text-align: center;
+    position: absolute;
+    color: #999;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
