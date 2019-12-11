@@ -8,9 +8,21 @@ header a.navbar-brand #nav-title{
   font-weight: 600;
 }
 
+.navbar.navbar-light{
+  background-color: var(--color-accent);
+}
+
+header a.navbar-brand #nav-title{
+  color: var(--color-main);
+  font-family: 'Leckerli One';
+  font-weight: normal;
+  font-size: 2.4rem;
+}
+
 header a.navbar-brand img{
   margin: 0;
   width: 36px;
+  padding-bottom: 12px;
   padding-right: 5px;
 }
 
@@ -38,9 +50,16 @@ header a.navbar-brand img{
   padding-left: 5px;
 }
 .btn-primary{
-  background: linear-gradient(to top left, var(--color-main), var(--color-main-light));
+  background: var(--color-sub);
+  color: var(--color-light);
   outline: none;
-  border: none;
+  border: 2px solid var(--color-main);
+}
+
+.btn-primary:hover{
+  background: var(--color-main);
+  color: var(--color-light);
+  border: 2px solid var(--color-sub);
 }
 .btn:hover{
   opacity: 0.9;
@@ -49,6 +68,26 @@ header a.navbar-brand img{
   outline: none;
   border: none;
   box-shadow:none !important;
+}
+.home-header .navbar-nav{
+  visibility: hidden;
+}
+.navbar-light .navbar-toggler{
+  border: 3px solid var(--color-sub);
+  border-radius: 50%;
+  width: 30px;
+  height: 39px;
+}
+
+
+.navbar-light .navbar-toggler:focus{
+  outline: none;
+}
+
+.toggle-icon{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-main);
 }
 
 @media screen and (max-width: 992px) {
@@ -67,4 +106,13 @@ header a.navbar-brand img{
   .navbar-collapse .contact{
     margin-top: 20px;
   }
+
+  .home-header .navbar-nav{
+    visibility: visible;
+  }
+
+  .hero-footer{
+    display: none!important;
+  }
+  
 }
