@@ -1,11 +1,420 @@
-@import "lib/abstract.css";
-@import "lib/base.css";
-@import "lib/components.css";
-@import "lib/utilities.css";
+/*======================================
+    Global CSS Variable Declarations
+========================================*/
+:root {
+    --color-main: #2001fe;
+    --color-sub: #ec2c1c;
+    --color-accent: #fbf200;
+    --color-dark: #656565;
+    --color-darker: #444;
+    --color-light: #f9f9f9;
+    --color-bg: #fcefe9;
+    --font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
+}
 
-@import "lib/header.css";
-@import "lib/footer.css";
+/*======================================
+    Base CSS (Default Style)
+========================================*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: initial;
+}
 
-@import "lib/pages/home.css";
-@import "lib/pages/blog.css";
-@import "lib/pages/single.css";
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--color-dark);
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+button {
+    font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    font-family: var(--font-family);
+}
+
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.4rem;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+    color: var(--color-primary-light);
+}
+
+strong,
+em {
+    color: var(--color-primary-light);
+}
+
+img {
+    width: 100%;
+}
+
+/*======================================
+    Reusablbe Components Style 
+========================================*/
+.content-box {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.btn {
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 8px 36px;
+    transition: all .1s ease-in-out;
+}
+
+.btn i {
+    padding-left: 5px;
+}
+
+.btn-primary {
+    background: var(--color-sub);
+    color: var(--color-light);
+    outline: none;
+    border: 2px solid var(--color-main);
+}
+
+.btn-primary:hover {
+    background: var(--color-main);
+    color: var(--color-light);
+    border: 2px solid var(--color-sub);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+}
+
+.social-menu {
+    width: 34rem;
+    margin: auto;
+}
+
+.social-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.social-menu ul li {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.social-menu ul li a {
+    color: var(--color-main);
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.social-menu ul li:hover {
+    background-color: var(--color-sub);
+
+}
+
+.social-menu ul li a:hover {
+    color: var(--color-accent);
+}
+
+.page-banner {
+    background-color: var(--color-light);
+    padding: 3.2rem 0;
+}
+
+.page-banner__title {
+    font-weight: 500;
+    word-spacing: 3px;
+    letter-spacing: 0.05px;
+    color: var(--color-main);
+}
+
+.page-banner__subtitle {
+    padding-top: 5px;
+}
+
+/*======================================
+    Header Section (Main) Style
+========================================*/
+header .navbar {
+    border-bottom: 2px solid var(--color-sub);
+}
+
+header a,
+header a:hover {
+    text-decoration: none;
+}
+
+header a.navbar-brand #nav-title {
+    color: var(--color-dark);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navbar.navbar-light {
+    background-color: var(--color-accent);
+}
+
+header a.navbar-brand #nav-title {
+    color: var(--color-main);
+    font-family: 'Leckerli One';
+    font-weight: normal;
+    font-size: 2.4rem;
+}
+
+header a.navbar-brand img {
+    margin: 0;
+    width: 36px;
+    padding-bottom: 12px;
+    padding-right: 5px;
+}
+
+.nav-item {
+    padding: 0 20px;
+    transition: all .1s ease-in-out;
+    font-size: 13.5px;
+}
+
+.nav-item:hover {
+    color: var(--color-sub);
+}
+
+.nav-item a i {
+    padding-right: 5px;
+}
+
+.navbar-light .navbar-toggler {
+    border: 3px solid var(--color-sub);
+    border-radius: 50%;
+    width: 30px;
+    height: 39px;
+}
+
+
+.navbar-light .navbar-toggler:focus {
+    outline: none;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-main);
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        height: 95vh;
+        text-align: center;
+    }
+
+    .navbar-collapse .navbar-nav {
+        margin-top: 20px;
+        border-top: 2px solid var(--color-main);
+    }
+
+    .navbar-collapse .navbar-nav li {
+        padding: 10px;
+    }
+
+    .navbar-collapse .navbar-nav li:first-of-type {
+        padding-top: 40px;
+    }
+
+    .navbar-collapse .contact {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+}
+
+
+
+/*======================================
+    Header Section (Front Page) Style
+========================================*/
+.home-header .navbar-nav {
+    visibility: hidden;
+}
+@media screen and (max-width: 992px) {
+    .home-header .navbar-nav {
+        visibility: visible;
+    }
+
+    .hero-footer {
+        display: none !important;
+    }
+}
+
+/*======================================
+    Front Page (Home) Style
+========================================*/
+
+.home .hero-sec {
+    background-color: var(--color-main);
+    position: relative;
+    height: 100vh;
+
+}
+.home .hero-sec .hero-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-light);
+}
+
+.home .hero-sec .hero-box__img{
+    width: 40%;
+}
+
+.home .hero-sec .hero-box__title{
+    text-transform: uppercase;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 26px;
+}
+
+.hero-box__text{
+    line-height: 1.8;
+    padding-bottom: 20px;
+}
+
+
+.hero-footer{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    justify-self: center;
+}
+
+.hero-footer__nav ul{
+    display: flex;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.hero-footer__nav ul li a{
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 13.5px;
+}
+
+.hero-footer__nav ul li a:hover{
+    color: var(--color-sub);
+}
+
+.hero-footer .social-menu{
+margin-right: 0;
+
+}
+
+
+/*======================================
+    Footer Section Style
+========================================*/
+footer {
+    padding-top: 3.2rem;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.footer-box {
+    padding-bottom: 3rem;
+}
+
+.about-site {
+    padding-bottom: 2rem;
+}
+
+.about-site__title a {
+    text-decoration: none;
+}
+
+.about-site__info {
+    max-width: 80%;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+
+
+.copyright-box {
+    background-color: var(--color-main);
+    color: var(--color-sub);
+    padding: 1rem;
+}
+
+.copyright-box a {
+    color: var(--color-light);
+}
