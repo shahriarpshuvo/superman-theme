@@ -8,8 +8,9 @@
   --color-dark: #656565;
   --color-darker: #444;
   --color-light: #f9f9f9;
-  --color-bg: #fcefe9;
+  --color-bg: #fffdea;
   --font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
+  --special-font: 'Leckerli One', Arial, Helvetica, sans-serif;
 }
 
 /*======================================
@@ -102,37 +103,35 @@ img {
   width: 100%;
 }
 
+.row>div {
+  box-sizing: border-box;
+}
+
+
 /*======================================
   Reusablbe Components Style 
 ========================================*/
 .content-box {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
+/* Button Style */
 .btn {
   font-weight: 600;
   font-size: 10px;
   text-transform: uppercase;
   padding: 8px 36px;
-  transition: all .1s ease-in-out;
+  color: var(--color-light) !important;
+  border-width: 2px;
+  border-style: solid;
+  border-right-width: 4px;
+  border-bottom-width: 3px;
+  text-decoration: none;
 }
 
 .btn i {
   padding-left: 5px;
-}
-
-.btn-primary {
-  background: var(--color-sub);
-  color: var(--color-light);
-  outline: none;
-  border: 2px solid var(--color-main);
-}
-
-.btn-primary:hover {
-  background: var(--color-main);
-  color: var(--color-light);
-  border: 2px solid var(--color-sub);
 }
 
 .btn:hover {
@@ -140,11 +139,27 @@ img {
 }
 
 .btn:focus {
-  outline: none;
-  border: none;
+  outline: none !important;
   box-shadow: none !important;
 }
 
+.btn:active {
+  transform: translateY(3px);
+  border-width: 2px !important;
+}
+
+.btn-main {
+  background: var(--color-sub);
+  border-color: var(--color-main);
+}
+
+.btn-accent {
+  color: var(--color-darker)!important;
+  background: var(--color-accent);
+  border-color: var(--color-sub);
+}
+
+/* Social Menu */
 .social-menu {
   width: 34rem;
   margin: auto;
@@ -182,21 +197,36 @@ img {
   color: var(--color-accent);
 }
 
-.page-banner {
-  background-color: var(--color-light);
-  padding: 3.2rem 0;
+/* Default Page Style */
+.page-header {
+  padding: 30px 0;
+  margin-top: 80px;
+  text-align: center;
 }
 
-.page-banner__title {
-  font-weight: 500;
-  word-spacing: 3px;
-  letter-spacing: 0.05px;
+.page-header__title {
+  font-size: 32px;
+  margin: 10px 0;
   color: var(--color-main);
+  font-weight: 600;
 }
 
-.page-banner__subtitle {
-  padding-top: 5px;
+.page-header__about {
+  width: 60%;
+  margin: 0 auto;
 }
+
+.page-header__icon{
+  font-size: 32px;
+  color: var(--color-sub);
+}
+
+@media screen and (max-width: 720px){
+  .page-header__about{
+    width: 100%;
+  }
+}
+
 
 /*======================================
   Header Section (Main) Style
@@ -222,7 +252,7 @@ header a.navbar-brand #nav-title {
 
 header a.navbar-brand #nav-title {
   color: var(--color-main);
-  font-family: 'Leckerli One';
+  font-family: var(--special-font);
   font-weight: normal;
   font-size: 2.4rem;
 }
@@ -238,6 +268,7 @@ header a.navbar-brand img {
   padding: 0 20px;
   transition: all .1s ease-in-out;
   font-size: 13.5px;
+  font-weight: 500;
 }
 
 .nav-item:hover {
@@ -292,8 +323,6 @@ header a.navbar-brand img {
 
 }
 
-
-
 /*======================================
   Header Section (Front Page) Style
 ========================================*/
@@ -306,7 +335,7 @@ header a.navbar-brand img {
     visibility: visible;
   }
 
-  .hero-footer {
+  .hero-footer__nav {
     display: none !important;
   }
 }
@@ -332,7 +361,7 @@ header a.navbar-brand img {
 }
 
 .home .hero-sec .hero-box__img {
-  width: 40%;
+  max-width: 350px;
 }
 
 .home .hero-sec .hero-box__title {
@@ -348,7 +377,6 @@ header a.navbar-brand img {
   line-height: 1.8;
   padding-bottom: 20px;
 }
-
 
 .hero-footer {
   position: absolute;
@@ -369,6 +397,7 @@ header a.navbar-brand img {
   color: var(--color-accent);
   text-decoration: none;
   font-size: 13.5px;
+  font-weight: 500;
 }
 
 .hero-footer__nav ul li a:hover {
@@ -377,9 +406,129 @@ header a.navbar-brand img {
 
 .hero-footer .social-menu {
   margin-right: 0;
-
 }
 
+@media screen and (max-width: 992px) {
+  .home .hero-sec .hero-box__img {
+    max-width: 320px;
+  }
+
+  .hero-footer__nav {
+    display: none !important;
+  }
+
+  .social-menu {
+    min-width: 50%;
+    width: 60%;
+    margin: 0 auto !important;
+  }
+}
+
+/*======================================
+  Blog Page Style 
+========================================*/
+
+/* Featured Posts */
+.featured-posts{
+  background-color: var(--color-bg);
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.featured-post {
+  text-align: center;
+}
+
+.featured-post__meta, .blog-post__meta{
+  padding-bottom: 5px;
+  font-weight: 600;
+  color: var(--color-darker);
+}
+
+.featured-post__meta-date, .blog-post__meta-date{
+  padding-bottom: 20px;
+}
+
+.featured-post__meta-tags span a::before, .blog-post__meta-tags span a::before{
+  content: "#";
+}
+
+.featured-post__meta-tags span a,
+.blog-post__meta-tags span a{
+  background-color: var(--color-sub);
+  color: var(--color-light);
+  padding: 3px 12px;
+  border-radius: 2px;
+  margin: 0 2px;
+  text-transform: lowercase;
+  text-decoration: none;
+}
+
+.featured-post__title h2 a,
+.blog-post__title h2 a{
+  font-weight: 600;
+  color: var(--color-main);
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.featured-post__title, .blog-post__title  {
+  padding: 8px 0;
+}
+
+.featured-post__title .emoji-icon{
+  font-size: 32px;
+}
+
+.featured-post__content {
+  width: 85%;
+  margin: auto;
+}
+
+.featured-post__permalink,
+.blog-post__permalink{
+  margin-top: 20px;
+}
+
+.carousel-control-prev i, 
+.carousel-control-next i{
+  font-size: 46px;
+  color: var(--color-dark);
+}
+
+.carousel-control-prev{
+  margin-left: 20px;
+}
+
+.carousel-control-next{
+  margin-right: 20px;
+}
+
+/* Blog Posts */
+.blog-posts{
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+.blog-post{
+  border: 2.5px solid var(--color-main);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.blog-post__meta-date{
+  padding: 0;
+  padding-top: 10px;
+}
+
+.blog-post__content{
+  text-align: justify;
+}
+
+.blog-posts .row>div{
+  margin-bottom: 33px;
+}
 
 /*======================================
   Footer Section Style
@@ -408,8 +557,6 @@ footer {
   margin: auto;
   padding-top: 1rem;
 }
-
-
 
 .copyright-box {
   background-color: var(--color-main);
