@@ -39,6 +39,7 @@ body {
 
 button {
   font-family: var(--font-family);
+  cursor: pointer;
 }
 
 h1,
@@ -107,6 +108,9 @@ img {
   box-sizing: border-box;
 }
 
+.container{
+  box-sizing: initial;
+}
 
 /*======================================
   Reusablbe Components Style 
@@ -154,7 +158,7 @@ img {
 }
 
 .btn-accent {
-  color: var(--color-darker)!important;
+  color: var(--color-darker) !important;
   background: var(--color-accent);
   border-color: var(--color-sub);
 }
@@ -198,13 +202,15 @@ img {
 }
 
 /* Default Page Style */
-.page-header {
+.page-header,
+.sp-header {
   padding: 30px 0;
   margin-top: 80px;
   text-align: center;
 }
 
-.page-header__title {
+.page-header__title,
+.sp-header__title {
   font-size: 32px;
   margin: 10px 0;
   color: var(--color-main);
@@ -216,13 +222,15 @@ img {
   margin: 0 auto;
 }
 
-.page-header__icon{
+.page-header__icon,
+.load-more__icon,
+.sp-header__icon {
   font-size: 32px;
   color: var(--color-sub);
 }
 
-@media screen and (max-width: 720px){
-  .page-header__about{
+@media screen and (max-width: 720px) {
+  .page-header__about {
     width: 100%;
   }
 }
@@ -429,7 +437,7 @@ header a.navbar-brand img {
 ========================================*/
 
 /* Featured Posts */
-.featured-posts{
+.featured-posts {
   background-color: var(--color-bg);
   padding: 50px;
   box-sizing: border-box;
@@ -440,22 +448,29 @@ header a.navbar-brand img {
   text-align: center;
 }
 
-.featured-post__meta, .blog-post__meta{
+.featured-post__meta,
+.blog-post__meta,
+.sp-post__meta {
   padding-bottom: 5px;
   font-weight: 600;
   color: var(--color-darker);
 }
 
-.featured-post__meta-date, .blog-post__meta-date{
+.featured-post__meta-date,
+.blog-post__meta-date,
+.sp-post__meta-date {
   padding-bottom: 20px;
 }
 
-.featured-post__meta-tags span a::before, .blog-post__meta-tags span a::before{
+.featured-post__meta-tags span a::before,
+.blog-post__meta-tags span a::before,
+.sp-post__meta-tags span a::before {
   content: "#";
 }
 
 .featured-post__meta-tags span a,
-.blog-post__meta-tags span a{
+.blog-post__meta-tags span a,
+.sp-post__meta-tags span a {
   background-color: var(--color-sub);
   color: var(--color-light);
   padding: 3px 12px;
@@ -466,18 +481,19 @@ header a.navbar-brand img {
 }
 
 .featured-post__title h2 a,
-.blog-post__title h2 a{
+.blog-post__title h2 a {
   font-weight: 600;
   color: var(--color-main);
   margin-top: 8px;
   text-decoration: none;
 }
 
-.featured-post__title, .blog-post__title  {
+.featured-post__title,
+.blog-post__title {
   padding: 8px 0;
 }
 
-.featured-post__title .emoji-icon{
+.featured-post__title .emoji-icon {
   font-size: 32px;
 }
 
@@ -487,83 +503,130 @@ header a.navbar-brand img {
 }
 
 .featured-post__permalink,
-.blog-post__permalink{
+.blog-post__permalink {
   margin-top: 20px;
 }
 
-.carousel-control-prev i, 
-.carousel-control-next i{
+.carousel-control-prev i,
+.carousel-control-next i {
   font-size: 46px;
   color: var(--color-dark);
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
   margin-left: 20px;
 }
 
-.carousel-control-next{
+.carousel-control-next {
   margin-right: 20px;
 }
 
 /* Blog Posts */
-.blog-posts{
+.blog-posts {
   margin: 40px auto;
   box-sizing: border-box;
 }
 
-.blog-post{
+.blog-post {
   border: 2.5px solid var(--color-main);
   border-radius: 5px;
   padding: 30px;
 }
 
-.blog-post__meta-date{
+.blog-post__meta-date {
   padding: 0;
   padding-top: 10px;
 }
 
-.blog-post__content{
+.blog-post__content {
   text-align: justify;
 }
 
-.blog-posts .row>div{
+.blog-posts .row>div {
   margin-bottom: 33px;
 }
 
+.load-more {
+  text-align: center;
+}
+
+.load-more a.btn {
+  font-size: 11px;
+  padding: 8px 60px;
+}
+
+/*======================================
+  Single Post (Blog) Style
+========================================*/
+.sp-post__meta-tags span a{
+  color: var(--color-darker);
+  background-color: var(--color-accent);
+}
+
+.sp{
+  max-width: 65%;
+  margin: auto;
+}
+
+.sp-thubnails img{
+  border-radius: 5px;
+  width: 100%;
+}
+
+.sp-content{
+  margin: 100px 0;
+}
+
+@media screen and (max-width: 900){
+  .sp{
+    width: 100%;
+    max-width: 100%;
+  }
+}
 /*======================================
   Footer Section Style
 ========================================*/
 footer {
-  padding-top: 3.2rem;
-  background-color: var(--color-dark);
+  background-color: var(--color-main);
   color: var(--color-light);
+}
+
+.footer-top {
   text-align: center;
+  padding: 60px 0;
 }
 
-.footer-box {
-  padding-bottom: 3rem;
+.footer-brand {
+  margin-bottom: 40px;
 }
 
-.about-site {
-  padding-bottom: 2rem;
+.footer-brand img {
+  width: 100px;
 }
 
-.about-site__title a {
+.footer-brand__title h2 {
+  font-family: var(--special-font);
+  font-size: 32px;
+  margin-top: 12px;
+}
+
+.footer-brand__title,
+.footer-brand__title:hover {
   text-decoration: none;
 }
 
-.about-site__info {
-  max-width: 80%;
-  margin: auto;
-  padding-top: 1rem;
+.footer-bottom {
+  font-weight: 500;
+  border-top: 5px solid var(--color-sub);
+  padding: 12px 0;
+  color: var(--color-darker);
+  background-color: var(--color-accent);
 }
 
-.copyright-box {
-  background-color: var(--color-main);
-  color: var(--color-sub);
-  padding: 1rem;
+.footer-menu {
+  text-transform: lowercase;
 }
 
-.copyright-box a {
-  color: var(--color-light);
+.footer-menu ul li a::before {
+  content: "# ";
 }
