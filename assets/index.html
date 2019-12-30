@@ -15,6 +15,7 @@
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
   <link rel="stylesheet" href="css/sps-style.css" />
 </head>
 
@@ -46,7 +47,7 @@
               <a href=""> 👨‍💼 &nbsp; Business</a>
             </li>
             <li class="nav-item">
-              <a href=""> ✍️ &nbsp; Journal</a>
+              <a href=""> ✍️ &nbsp; Blog</a>
             </li>
             <li class="nav-item">
               <a href=""> 🗂 &nbsp; Projects</a>
@@ -65,7 +66,7 @@
   <main class="blog">
     <section class="container">
       <div class="page-header">
-        <h1 class="page-header__title">✍️ &nbsp;Journal</h1>
+        <h1 class="page-header__title">✍️ &nbsp;Blog</h1>
         <p class="page-header__about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
           accusantium, cum quae dolores magni pariatur sapiente minus repellendus vitae quibusdam
           unde similique.</p>
@@ -165,7 +166,7 @@
 
         <div class="blog-posts content-box">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 ">
               <article class="blog-post">
                 <div class="blog-post__meta">
                   <div class="blog-post__meta-tags">
@@ -175,12 +176,13 @@
                     Jul 01, 2019 | 06.30 PM
                   </div>
                 </div>
+                
                 <div class="blog-post__title">
                   <h2><a href="#">Async, Await & Hooks in React</a></h2>
                 </div>
                 <div class="blog-post__content">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt nostrum
-                  repudiandae quam veritatis numquam, quibusdam temporibus aliquid, rerum quis eos
+                  repudiandae quam Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ratione, dolore possimus quis excepturi nobis asperiores nam, est debitis ea nostrum laudantium aspernatur perspiciatis, rerum totam facere eaque doloribus dolores! veritatis numquam, quibusdam temporibus aliquid, rerum quis eos
                   delectus voluptate. A reprehenderit debitis, vel quasi architecto provident
                   aperiam
                   est veritatis animi natus? Harum optio reprehenderit vel. Explicabo, sit?
@@ -236,6 +238,34 @@
                   delectus voluptate. A reprehenderit debitis, vel quasi architecto provident
                   aperiam
                   est veritatis animi natus? Harum optio reprehenderit vel. Explicabo, sit?
+                  
+                </div>
+                <div class="blog-post__permalink">
+                  <a href="#" class="btn btn-accent">Read More <i
+                      class="icon ion-md-arrow-round-forward"></i></a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6">
+              <article class="blog-post">
+                <div class="blog-post__meta">
+                  <div class="blog-post__meta-tags">
+                    <span><a href="#">javascript</a></span> <span><a href="#">react</a></span>
+                  </div>
+                  <div class="blog-post__meta-date">
+                    Jul 01, 2019 | 06.30 PM
+                  </div>
+                </div>
+                <div class="blog-post__title">
+                  <h2><a href="#">Async, Await & Hooks in React</a></h2>
+                </div>
+                <div class="blog-post__content">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt nostrum
+                  repudiandae quam veritatis numquam, quibusdam temporibus aliquid, rerum quis eos
+                  delectus voluptate. A reprehenderit debitis, vel quasi architecto provident
+                  aperiam
+                  est veritatis animi natus? Harum optio reprehenderit vel. Explicabo, sit?
+                  
                 </div>
                 <div class="blog-post__permalink">
                   <a href="#" class="btn btn-accent">Read More <i
@@ -256,7 +286,7 @@
 
   </main>
 
-  <footer class="">
+  <footer>
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
@@ -265,7 +295,13 @@
             <h2>Mr.spShuvo</h2>
           </a>
         </div>
-
+        <div class="subscriber-form">
+          <form>
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <button class="btn btn-accent">Subscribe</button>
+          </form>
+        </div>
         <div class="social-menu">
           <ul>
             <li><a href="#"><i class="icon ion-logo-linkedin"></i></a>
@@ -326,6 +362,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script src="js/sps-scripts.js"></script>
 </body>
 
