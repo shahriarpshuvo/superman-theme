@@ -24,7 +24,8 @@
   box-sizing: initial;
 }
 
-html,body{
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -672,9 +673,8 @@ header a.navbar-brand img {
   padding-bottom: 0;
 }
 
-.project-info__thumbnails img {
-  width: 99.99%;
-  margin: auto;
+.project-info__thumbnails {
+  margin: .5px 1px;
 }
 
 .project-scroller {
@@ -738,18 +738,323 @@ header a.navbar-brand img {
     padding: 0;
   }
 
-  .projects-sec .container{
+  .projects-sec .container {
     padding: 0;
     margin: 0;
   }
 }
 
-
-
 /*======================================
-  Project Page Signle
+  Page Post Type
 ========================================*/
 
+
+.page-single__header {
+  margin-top: 65px;
+  background-color: var(--color-main);
+  margin-bottom: 40px;
+  color: var(--color-light);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.page-single__header p {
+  max-width: 70%;
+  padding: 1%;
+  margin: auto;
+}
+
+.page-icon {
+  font-size: 28px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/*======================================
+  Project Page Single
+========================================*/
+.projects-single__header {
+  margin-top: 65px;
+  background-color: var(--color-main);
+  margin-bottom: 40px;
+  color: var(--color-light);
+}
+
+.project__header {
+  padding: 40px 0;
+}
+
+
+.project__header-title {
+  color: var(--color-accent);
+}
+
+.project__header-info {
+  text-align: right;
+}
+
+.project__header-info--title {
+  color: var(--color-accent);
+  font-size: 16px;
+}
+
+.project__header-info--date {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.project__header-info--link a,
+.project__header-info-1--link a {
+  color: var(--color-accent);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project__header-info-1--link {
+  display: none;
+}
+
+@media (max-width:1080px) {
+  .projects-single__header-2 {
+    display: none;
+  }
+
+  .project__header-info-1--link {
+    display: block;
+  }
+}
+
+/*======================================
+  Post Content Style
+========================================*/
+
+.post-content {
+  margin: 60px 0;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-sub);
+}
+
+.post-content img {
+  width: 100%;
+}
+
+.post-content p {
+  text-align: justify;
+}
+
+/*======================================
+  404 Page Style
+=======================================*/
+
+.page-404 {
+  padding: 250px 0;
+  background-color: var(--color-sub);
+  text-align: center;
+}
+
+.page-404 img {
+  width: 400px;
+  margin: auto;
+}
+
+.page-404 h2 {
+  max-width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  color: var(--color-accent);
+}
+
+/*======================================
+  About Me Style
+========================================*/
+.aboutme{
+  padding: 80px 0;
+}
+
+.aboutme__header{
+  text-align: center;
+}
+
+.aboutme__header h2, .aboutme__header p{
+  margin: 0;
+  padding: 0;
+}
+
+.aboutme__img{
+  height: 100px;
+  background-color: var(--color-accent);
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 60px;
+  position: relative;
+  background-color: var(--color-main);
+  border-radius: 8px 8px 0 0;
+}
+
+.aboutme__img img{
+  position: absolute;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -15%);
+  border: 3px solid var(--color-sub);
+}
+
+.aboutme__email{
+  color: var(--color-sub);
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+}
+
+.aboutme__header a{
+  font-weight: 600;
+  color: var(--color-main);
+}
+
+.aboutme__summary{
+  padding-top: 40px;
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+.aboutme__summary h2{
+  background-color: var(--color-accent);
+  display: inline-block;
+  padding: 3px 15px 3px 5px;
+}
+
+.aboutme__box .card{
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.aboutme__box .card-content{
+  padding: 30px;
+}
+
+
+.aboutme__box .card-title{
+  text-align: center;
+  background-color: var(--color-accent);
+  margin: 0 auto;
+  padding: 5px 0;
+  margin-bottom: 30px;
+  width: 50%;
+  font-size: 18px;
+}
+
+
+.aboutme__box .edu__img{
+  text-align: center;
+}
+
+.aboutme__box .edu__img img{
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.aboutme__box  .edu__org{
+  color: var(--color-sub);
+  font-size: 18px;
+}
+
+.aboutme__box .edu__degree{
+  font-weight: normal;
+}
+
+
+.aboutme__box .project__icon{
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-light);
+  border: 2px solid var(--color-accent);
+  text-align: center;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.aboutme__box .project__icon span{
+  font-size: 26px;
+}
+
+.aboutme__box .card-info__title{
+  color: var(--color-sub);
+  font-size: 18px;
+}
+
+.aboutme__box .card-info__tags{
+  color: var(--color-accent);
+  background-color: var(--color-main);
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  margin-left: 8px;
+  text-transform: lowercase;
+}
+
+.aboutme__box .card-info__summary{
+  padding: 0;
+  margin: 0;
+}
+
+.aboutme__box .card-info__link{
+  color: var(--color-main);
+}
+
+
+
+.aboutme__box .skillsets .card-info__tags{
+  margin: 0;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  text-transform: none;
+}
+
+.experience .card-info__tags{
+  margin: 0;
+}
+
+.aboutme__box .card-columns{
+  column-count: 2;
+}
+
+@media (max-width: 780px){
+  .aboutme__box .card-columns{
+    column-count: 1;
+  }
+}
+
+@media (max-width: 990px){
+
+  .aboutme__box .card-info__tags{
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1800px){
+  .aboutme__box .card-columns{
+    column-count: 3;
+  }
+}
 
 /*======================================
   Footer Section Style
@@ -799,7 +1104,6 @@ footer {
   position: relative;
 }
 
-
 .subscriber-form input[type="email"] {
   width: 360px;
   padding: 10px;
@@ -820,7 +1124,6 @@ footer {
   padding: 7px 15px;
 }
 
-
 .footer-menu {
   text-transform: lowercase;
 }
@@ -838,14 +1141,12 @@ footer {
   color: var(--color-sub);
 }
 
-
-
 @media screen and (max-width: 80rem) {
   .footer-menu {
     display: none;
   }
 
-  .footer-bottom .row{
+  .footer-bottom .row {
     width: 80%;
   }
 }
