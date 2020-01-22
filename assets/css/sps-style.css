@@ -544,17 +544,17 @@ header a.navbar-brand img {
   padding-bottom: 20px;
 }
 
-.featured-post__meta-tags span a::before,
-.blog-post__meta-tags span a::before,
-.sp-post__meta-tags span a::before,
-.project-info__meta-tags span a::before {
+.featured-post__meta-tags span::before,
+.blog-post__meta-tags span::before,
+.sp-post__meta-tags span::before,
+.project-info__meta-tags span::before {
   content: "#";
 }
 
-.featured-post__meta-tags span a,
-.blog-post__meta-tags span a,
-.sp-post__meta-tags span a,
-.project-info__meta-tags span a {
+.featured-post__meta-tags span,
+.blog-post__meta-tags span,
+.sp-post__meta-tags span,
+.project-info__meta-tags span {
   background-color: var(--color-sub);
   color: var(--color-light);
   padding: 3px 12px;
@@ -868,6 +868,8 @@ header a.navbar-brand img {
   margin: auto;
   padding: 40px 0;
   color: var(--color-accent);
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 /*======================================
