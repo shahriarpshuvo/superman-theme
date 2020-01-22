@@ -1060,6 +1060,7 @@ header a.navbar-brand img {
 
 .contact__profile{
   padding: 80px 10px;
+  padding-bottom: 60px;
   background-color: var(--color-sub);
   color: var(--color-bg);
   font-weight: 600;
@@ -1087,13 +1088,21 @@ header a.navbar-brand img {
 .contact__email{
   color: var(--color-accent);
   display: block;
+  margin-top: 10px;
   padding: 10px;
   text-decoration: none;
 }
 
 .contact__profile-social .social-menu{
   width: 75%;
-  margin-top: 50px;
+}
+
+.contact__profile-social {
+  margin: 40px  20px;
+  margin-bottom: 0;
+  padding: 15px 0;
+  background-color: #ffffff40;
+  border-radius: 200px;
 }
 /*======================================
   Footer Section Style
