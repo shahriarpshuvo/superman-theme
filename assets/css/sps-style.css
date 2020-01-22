@@ -888,13 +888,14 @@ header a.navbar-brand img {
 
 .aboutme__img{
   height: 100px;
-  background-color: var(--color-accent);
   text-align: center;
   margin: auto;
   padding: 20px;
   margin-bottom: 60px;
   position: relative;
-  background-color: var(--color-main);
+  background: url('../img/cover.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 8px 8px 0 0;
 }
 
@@ -907,7 +908,7 @@ header a.navbar-brand img {
   object-position: center;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -15%);
+  transform: translate(-50%, -10%);
   border: 3px solid var(--color-sub);
 }
 
@@ -1052,6 +1053,48 @@ header a.navbar-brand img {
   }
 }
 
+
+.contact-sec{
+  margin: 120px auto;
+}
+
+.contact__profile{
+  padding: 80px 10px;
+  background-color: var(--color-sub);
+  color: var(--color-bg);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.contact__profile-img img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--color-main);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -185%);
+}
+
+@media (max-width:1000px){
+  .contact__profile-img img{
+    transform: translate(-45%, -165%);
+  }
+}
+.contact__email{
+  color: var(--color-accent);
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.contact__profile-social .social-menu{
+  width: 75%;
+  margin-top: 50px;
+}
 /*======================================
   Footer Section Style
 ========================================*/
