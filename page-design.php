@@ -1,0 +1,1 @@
+<?php sps_custom_post_types('design'); ?>

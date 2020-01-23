@@ -17,7 +17,7 @@
         <div class="hero-footer__nav">
           <ul>
             <li class="nav-item">
-              <a href="<?php echo site_url('/about-me') ?>"> 😎 &nbsp; About Me</a>
+              <a href="<?php echo site_url('/about') ?>"> 😎 &nbsp; About Me</a>
             </li>
             <li class="nav-item">
               <a href="<?php echo site_url('/coding') ?>"> 👨🏻‍💻 &nbsp; Coding</a>
@@ -36,20 +36,7 @@
             </li>
           </ul>
         </div>
-        <div class="social-menu">
-          <ul>
-            <li><a href="#"><i class="icon ion-logo-linkedin"></i></a>
-            </li>
-            <li><a href="#"><i class="icon ion-logo-github"></i></a>
-            </li>
-            <li><a href="#"><i class="icon ion-logo-facebook"></i></a>
-            </li>
-            <li><a href="#"><i class="icon ion-logo-twitter"></i></a>
-            </li>
-            <li><a href="#"><i class="icon ion-ios-mail-unread"></i></a>
-            </li>
-          </ul>
-        </div>
+        <?php get_template_part( 'template-parts/template', 'social' ); ?>
       </div>
     </section>
   </main>

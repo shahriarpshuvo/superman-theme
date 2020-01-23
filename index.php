@@ -1,12 +1,11 @@
-<?php get_header();
-?>
+<?php get_header(); ?>
 
 <main class='blog'>
   <section class='container'>
     <div class='page-header'>
       <h1 class='page-header__title'>✍️ &nbsp; Journal</h1>
       <p class='page-header__about'>Sometimes, my thoughts have no limits. Sometimes, it
-        becomes so powerful that I could live life only by thinking something. Sometimes, it
+        becomes so powerful that I could live life only by thinking about something. Sometimes, it
         just a time-waster and, sometimes it turns out an idea that could change the world.
         Here are some of my thoughts and activities.</p>
       <div class='page-header__icon'><i class='icon ion-ios-more'></i></div>
@@ -47,7 +46,7 @@
 
             <div class='featured-post__title'>
               <span class='emoji-icon'>👌</span>
-              <h2><a href='#'><?php the_title(); ?></a></h2>
+              <h2><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h2>
             </div>
             <div class='featured-post__content'>
               <?php echo wp_trim_words(get_the_content(), 44, ' ...') ?>
@@ -96,7 +95,7 @@
                 </div>
               </div>
               <div class='blog-post__title'>
-                <h2><a href='#'><?php the_title(); ?></a></h2>
+                <h2><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h2>
               </div>
               <div class='blog-post__content'>
                 <?php echo wp_trim_words(get_the_content(), 60, ' ...') ?>

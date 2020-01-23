@@ -9,3 +9,52 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sps
 */
+
+
+button#wpforms-submit-164 {
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 8px 36px;
+    color: var(--color-light) !important;
+    border-width: 2px;
+    border-style: solid;
+    border-right-width: 4px;
+    border-bottom-width: 3px;
+    text-decoration: none;
+}
+
+button#wpforms-submit-164:hover {
+    opacity: 0.9;
+}
+
+button#wpforms-submit-164:focus,
+button {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+button#wpforms-submit-164:active {
+    transform: translateY(3px);
+    border-width: 2px !important;
+}
+
+button#wpforms-submit-164 {
+    color: var(--color-darker) !important;
+    background: var(--color-accent);
+    border-color: var(--color-sub);
+}
+
+.contact-form #wpforms-164-field_1,
+.contact-form #wpforms-164-field_2,
+.contact-form #wpforms-164-field_5 {
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    resize: none;
+}
+
+.contact-form #wpforms-164-field_1:focus,
+.contact-form #wpforms-164-field_2:focus,
+.contact-form #wpforms-164-field_5:focus {
+    border: 2px solid var(--color-main);
+}

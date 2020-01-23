@@ -35,7 +35,7 @@
   <header class="<?php if(is_front_page()) echo 'home-header' ?>">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?php echo site_url('/'); ?>">
           <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/logo.png'; ?>" alt="" srcset="">
           <span id="nav-title">Mr.spShuvo</span>
         </a>
@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto ">
             <li class="nav-item">
-              <a href="<?php echo site_url('/about-me') ?>"> 😎 &nbsp; About Me</a>
+              <a href="<?php echo site_url('/about') ?>"> 😎 &nbsp; About Me</a>
             </li>
             <li class="nav-item">
               <a href="<?php echo site_url('/coding') ?>"> 👨🏻‍💻 &nbsp; Coding</a>

@@ -20,11 +20,11 @@
             </div>
             <div class="sp-header__icon"><i class="icon ion-ios-more"></i></div>
         </div>
-
-        <div class="sp-thubnails">
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Post Thumbnail">
-        </div>
-
+        <?php if(get_the_post_thumbnail_url()): ?>
+            <div class="sp-thubnails">
+                <img src="<?php the_post_thumbnail_url(); ?>" alt="Blog Post Thumbnail">
+            </div>
+        <?php endif; ?>
         <div class="sp-content">
             <?php the_content(); ?>
         </div>
