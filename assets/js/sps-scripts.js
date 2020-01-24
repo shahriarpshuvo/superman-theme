@@ -5,19 +5,19 @@ $(document).ready(function() {
   
   let limit = 6;
 
-  if ($(".blog-posts .col-md-6:hidden").length == 0) {
-    $(".blog-posts .col-md-6").slice(6).hide();
+  if ($(".postbox:hidden").length == 0) {
+    $(".postbox").slice(6).hide();
   }
 
-  if ($('.blog-posts .col-md-6').length != 0) {
+  if ($('.postbox').length != 0) {
     $(".loadmore__button").show();
   }
 
   $(".loadmore__button").on("click", function(e) {
     e.preventDefault();
   
-    $(".blog-posts .col-md-6:hidden").slice(0, limit).show();
-    if ($(".blog-posts .col-md-6:hidden").length == 0) {
+    $(".postbox:hidden").slice(0, limit).show();
+    if ($(".postbox:hidden").length == 0) {
       $(".loadmore__button").hide();
     }
   });

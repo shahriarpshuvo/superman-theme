@@ -13,7 +13,7 @@
     <div class="contact-sec">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-4 mb-5">
             <div class="contact__profile">
               <div class="contact__profile-img">
                 <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/profile.jpg' ?>" alt="" srcset="">
@@ -28,8 +28,8 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 ml-auto">
-            <h2>📨 &nbsp;Contact Now!</h2>
+          <div class="col-lg-6 ml-auto mt-2">
+            <h2 class="contact-form__title">📨 &nbsp;Contact Now!</h2>
             <hr>
             <?php the_content(); ?>
           </div>

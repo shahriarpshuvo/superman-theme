@@ -75,11 +75,11 @@
       <div class='blog-posts content-box'>
         <div class='row'>
           <?php
-            query_posts('cat=-2&posts_per_page=-1');
+            query_posts('posts_per_page=-1');
             while (have_posts()): the_post(); 
               $post_tags =  get_the_tags();
             ?>
-          <div class='col-md-6'>
+          <div class='col-md-6 postbox'>
             <article class='blog-post'>
               <div class='blog-post__meta'>
 

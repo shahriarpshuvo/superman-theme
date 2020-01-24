@@ -58,3 +58,13 @@ button#wpforms-submit-164 {
 .contact-form #wpforms-164-field_5:focus {
     border: 2px solid var(--color-main);
 }
+
+.wpforms-field-label{
+    font-size: 13px!important;
+}
+
+@media (max-width: 992px){
+    .contact-form__title, .wpforms-submit-container {
+        text-align: center;
+    }
+}
