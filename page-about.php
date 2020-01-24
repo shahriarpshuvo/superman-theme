@@ -3,7 +3,7 @@
 
   <div class="aboutme__header container">
     <div class="aboutme__img">
-      <img src="img/profile.jpg" alt="" srcset="">
+      <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/profile.jpg' ?>" alt="" srcset="">
     </div>
     <h2 class="aboutme__name">Shahriar Parvez Shuvo</h2>
     <p><span class="aboutme__email">contact@spshuvo.com</span>J.J.B. Sheikh Mujibur Hall,
@@ -34,7 +34,7 @@
             <div class="row">
               <div class="col-3">
                 <div class="edu__img">
-                  <img src="img/ku.png">
+                  <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/ku.png' ?>">
                 </div>
               </div>
               <div class="col-9 mb-4">
@@ -46,7 +46,7 @@
 
               <div class="col-3">
                 <div class="edu__img">
-                  <img src="img/dc.png">
+                  <img src="<?php echo get_stylesheet_directory_uri().'/assets/img/dc.png' ?>">
                 </div>
               </div>
               <div class="col-9 mb-4">
