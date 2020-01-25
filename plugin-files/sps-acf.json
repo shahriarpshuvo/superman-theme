@@ -1,5 +1,230 @@
 [
     {
+        "key": "group_5e2c7ac31877a",
+        "title": "About Info",
+        "fields": [
+            {
+                "key": "field_5e2c7ad7cc265",
+                "label": "About Options",
+                "name": "about_options",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": [
+                    "About",
+                    "Education",
+                    "Tools",
+                    "Experience",
+                    "Achivements",
+                    "Course",
+                    "Project"
+                ],
+                "allow_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value",
+                "save_custom": 0
+            },
+            {
+                "key": "field_5e2c8066cc269",
+                "label": "About Icon",
+                "name": "about_icon",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5e2c7bc9cc266",
+                "label": "About Title",
+                "name": "about_title",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Khulna University or Design tools",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e2c7ea5cc267",
+                "label": "About Subtitle",
+                "name": "about_subtitle",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Bachelor of Business Administration",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e2cb156a01f9",
+                "label": "About Timeline",
+                "name": "about_timeline",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "July, 2019 - August, 2019",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e2c7f0ccc268",
+                "label": "About Summary",
+                "name": "about_summary",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5e2c809bcc26a",
+                "label": "About Link",
+                "name": "about_link",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "http:\/\/...",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e2c938f9b95d",
+                "label": "About Tools",
+                "name": "about_tools",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Adobe XD": "Adobe XD",
+                    "VS Code": "VS Code",
+                    "Balsmiq Mockups": "Balsmiq Mockups",
+                    "MS Powerpoint": "MS Powerpoint"
+                },
+                "allow_custom": 1,
+                "save_custom": 1,
+                "default_value": [],
+                "layout": "horizontal",
+                "toggle": 0,
+                "return_format": "label"
+            },
+            {
+                "key": "field_5e2caecf303df",
+                "label": "About Tag",
+                "name": "about_tag",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "udemy": "udemy",
+                    "client project": "client project",
+                    "intern": "intern",
+                    "champion": "champion",
+                    "star-performer": "star-performer",
+                    "star performer": "star performer"
+                },
+                "allow_custom": 1,
+                "save_custom": 1,
+                "default_value": [],
+                "layout": "horizontal",
+                "toggle": 0,
+                "return_format": "label"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "about"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5e295f3766840",
         "title": "Featured Post?",
         "fields": [

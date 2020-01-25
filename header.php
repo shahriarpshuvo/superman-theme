@@ -10,24 +10,24 @@
   <meta name="description" content="A self-taught programmer ">
 
   <!-- Twitter Meta Tags -->
-  <!-- <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@Mr.spShuvo">
-  <meta name="twitter:title" content="1MANDEV | Battle Proven Developers at Services">
-  <meta name="twitter:description" content="We develop and deliver a well-designed, fully customized website for your audiences just on time. Our battle-proven developers make sure the best uses of web tools to ship your product under the budget.">
-  <meta name="twitter:image" content="http://spshuvo.com/wp-content/themes/spshuvo/assets/img/icon.png"> -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Mr_spShuvo">
+  <meta name="twitter:title" content="<?php bloginfo('name');  ?> | <?php bloginfo('description') ?>">
+  <meta name="twitter:description" content="A self-taught Computer Programmer. Studying Business Administration in undergrad. Love to learn about new things, especially about the Business & Technology.">
+  <meta name="twitter:image" content="<?php echo site_url(); ?>/wp-content/themes/spshuvo/assets/img/icon.png">
   
   <!-- Facebook Meta Tags -->
-  <!-- <meta property="og:image" content="http://spshuvo.com/wp-content/themes/spshuvo/assets/img/icon.png" itemprop="thumbnailUrl">
-  <meta property="og:title" content="1MANDEV | Battle Proven Developers at Services">
-  <meta property="og:url" content="http://1mandev.com/">
-  <meta property="og:site_name" content="1MANDEV">
+  <meta property="og:image" content="<?php echo site_url(); ?>/wp-content/themes/spshuvo/assets/img/icon.png" itemprop="thumbnailUrl">
+  <meta property="og:title" content="<?php bloginfo('name');  ?> | <?php bloginfo('description') ?>">
+  <meta property="og:url" content="<?php echo site_url(); ?>">
+  <meta property="og:site_name" content="<?php bloginfo('name');  ?>">
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="We develop and deliver a well-designed, fully customized website for your audiences just on time. Our battle-proven developers make sure the best uses of web tools to ship your product under the budget.">
+  <meta property="og:description" content="A self-taught Computer Programmer. Studying Business Administration in undergrad. Love to learn about new things, especially about the Business & Technology.">
 
-  <meta property="fb:app_id" content="2023279554450480" /> -->
+  <meta property="fb:app_id" content="118506799477780" />
 
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri().'/assets/img/favicon.ico'; ?>" type="image/x-icon">
-  <title>Mr.spShuvo | Softcore Coder, Hardcore Businessman</title>
+  <title><?php bloginfo('name');  ?> | <?php bloginfo('description') ?></title>
   <?php wp_head(); ?>
 </head>
 

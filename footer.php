@@ -7,13 +7,11 @@
             <h2>Mr.spShuvo</h2>
           </a>
         </div>
+
         <div class="subscriber-form">
-          <form>
-            <label for="email">Email Address:</label>
-            <input type="email" name="email" id="email" placeholder="Email Address">
-            <button class="btn btn-accent">Subscribe</button>
-          </form>
+          <?php echo do_shortcode('[mc4wp_form id="259"]') ?>
         </div>
+
         <?php get_template_part( 'template-parts/template', 'social' ); ?>
       </div>
       

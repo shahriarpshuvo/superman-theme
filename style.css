@@ -3,13 +3,16 @@ Theme Name: Mr.spShuvo
 Theme URI: http://1mandev.com/wp-theme/spshuvo
 Author: 1MANDEV
 Author URI: http://1mandev.com
-Description: Mr.spShuvo theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Description: Mr.spShuvo theme for build for spshuvo.com
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sps
 */
 
+/*===================
+    WPForms
+=====================*/
 
 button#wpforms-submit-164 {
     font-weight: 600;
