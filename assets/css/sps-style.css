@@ -562,6 +562,8 @@ header a.navbar-brand img {
   margin: 0 2px;
   text-transform: lowercase;
   text-decoration: none;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .featured-post__title h2 a,
@@ -709,10 +711,11 @@ header a.navbar-brand img {
 .project-info {
   border: 2.5px solid var(--color-main);
   border-radius: 3px;
+  padding: 5px;
 }
 
 .project-info__about {
-  padding: 20px;
+  padding: 15px;
 }
 
 .card-columns {
@@ -793,6 +796,27 @@ header a.navbar-brand img {
   text-align: right;
 }
 
+.project__header-tools{
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.project__header-tools--name{
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.project__header-tools--name:not(:last-of-type)::after{
+  content: ",";
+}
+
+.project-info__meta-date{
+  margin-left: 2px;
+  margin-bottom: 5px;
+}
+
 .project__header-info--title {
   color: var(--color-accent);
   font-size: 16px;
@@ -800,15 +824,22 @@ header a.navbar-brand img {
 
 .project__header-info--date {
   font-weight: 600;
+}
+
+.project__header-info--date span{
+  font-weight: 600;
   color: var(--color-accent);
+  display: block;
 }
 
 .project__header-info--link a,
 .project__header-info-1--link a {
   color: var(--color-accent);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   text-decoration: none;
+  border-bottom: 2px solid var(--color-accent);
+  padding: 2px;
 }
 
 .project__header-info-1--link {
@@ -875,20 +906,21 @@ header a.navbar-brand img {
 /*======================================
   About Me Style
 ========================================*/
-.aboutme{
+.aboutme {
   padding: 80px 0;
 }
 
-.aboutme__header{
+.aboutme__header {
   text-align: center;
 }
 
-.aboutme__header h2, .aboutme__header p{
+.aboutme__header h2,
+.aboutme__header p {
   margin: 0;
   padding: 0;
 }
 
-.aboutme__img{
+.aboutme__img {
   height: 100px;
   text-align: center;
   margin: auto;
@@ -901,7 +933,7 @@ header a.navbar-brand img {
   border-radius: 8px 8px 0 0;
 }
 
-.aboutme__img img{
+.aboutme__img img {
   position: absolute;
   border-radius: 50%;
   width: 130px;
@@ -914,43 +946,43 @@ header a.navbar-brand img {
   border: 3px solid var(--color-sub);
 }
 
-.aboutme__email{
+.aboutme__email {
   color: var(--color-sub);
   font-size: 15px;
   font-weight: 600;
   display: block;
 }
 
-.aboutme__header a{
+.aboutme__header a {
   font-weight: 600;
   color: var(--color-main);
 }
 
-.aboutme__summary{
+.aboutme__summary {
   padding-top: 40px;
   text-align: justify;
   padding-bottom: 20px;
 }
 
-.aboutme__summary h2{
+.aboutme__summary h2 {
   background-color: var(--color-accent);
   display: inline-block;
   padding: 3px 15px 3px 5px;
 }
 
-.aboutme__box .card{
+.aboutme__box .card {
   background-color: var(--color-bg);
   border: 2px solid var(--color-accent);
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
-.aboutme__box .card-content{
+.aboutme__box .card-content {
   padding: 30px;
 }
 
 
-.aboutme__box .card-title{
+.aboutme__box .card-title {
   text-align: center;
   background-color: var(--color-accent);
   margin: 0 auto;
@@ -961,11 +993,11 @@ header a.navbar-brand img {
 }
 
 
-.aboutme__box .edu__img{
+.aboutme__box .edu__img {
   text-align: center;
 }
 
-.aboutme__box .edu__img img{
+.aboutme__box .edu__img img {
   text-align: center;
   width: 60px;
   height: 60px;
@@ -973,17 +1005,17 @@ header a.navbar-brand img {
   object-position: center;
 }
 
-.aboutme__box  .edu__org{
+.aboutme__box .edu__org {
   color: var(--color-sub);
   font-size: 18px;
 }
 
-.aboutme__box .edu__degree{
+.aboutme__box .edu__degree {
   font-weight: normal;
 }
 
 
-.aboutme__box .project__icon{
+.aboutme__box .project__icon {
   width: 50px;
   height: 50px;
   background-color: var(--color-light);
@@ -993,16 +1025,16 @@ header a.navbar-brand img {
   margin: auto;
 }
 
-.aboutme__box .project__icon span{
+.aboutme__box .project__icon span {
   font-size: 26px;
 }
 
-.aboutme__box .card-info__title{
+.aboutme__box .card-info__title {
   color: var(--color-sub);
   font-size: 18px;
 }
 
-.aboutme__box .card-info__tags{
+.aboutme__box .card-info__tags {
   color: var(--color-accent);
   background-color: var(--color-main);
   font-weight: 600;
@@ -1013,18 +1045,18 @@ header a.navbar-brand img {
   text-transform: lowercase;
 }
 
-.aboutme__box .card-info__summary{
+.aboutme__box .card-info__summary {
   padding: 0;
   margin: 0;
 }
 
-.aboutme__box .card-info__link{
+.aboutme__box .card-info__link {
   color: var(--color-main);
 }
 
 
 
-.aboutme__box .skillsets .card-info__tags{
+.aboutme__box .skillsets .card-info__tags {
   margin: 0;
   display: inline-block;
   margin-right: 2px;
@@ -1032,35 +1064,35 @@ header a.navbar-brand img {
   text-transform: none;
 }
 
-.aboutme__box .card-columns{
+.aboutme__box .card-columns {
   column-count: 2;
 }
 
-@media (max-width: 780px){
-  .aboutme__box .card-columns{
+@media (max-width: 780px) {
+  .aboutme__box .card-columns {
     column-count: 1;
   }
 }
 
-@media (max-width: 990px){
+@media (max-width: 990px) {
 
-  .aboutme__box .card-info__tags{
+  .aboutme__box .card-info__tags {
     margin-left: 0;
   }
 }
 
-@media (min-width: 1800px){
-  .aboutme__box .card-columns{
+@media (min-width: 1800px) {
+  .aboutme__box .card-columns {
     column-count: 3;
   }
 }
 
 
-.contact-sec{
+.contact-sec {
   margin: 120px auto;
 }
 
-.contact__profile{
+.contact__profile {
   padding: 80px 10px;
   padding-bottom: 60px;
   background-color: var(--color-sub);
@@ -1071,7 +1103,7 @@ header a.navbar-brand img {
   position: relative;
 }
 
-.contact__profile-img img{
+.contact__profile-img img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -1082,12 +1114,13 @@ header a.navbar-brand img {
   transform: translate(-50%, -185%);
 }
 
-@media (max-width:1000px){
-  .contact__profile-img img{
+@media (max-width:1000px) {
+  .contact__profile-img img {
     transform: translate(-45%, -165%);
   }
 }
-.contact__email{
+
+.contact__email {
   color: var(--color-accent);
   display: block;
   margin-top: 10px;
@@ -1095,17 +1128,18 @@ header a.navbar-brand img {
   text-decoration: none;
 }
 
-.contact__profile-social .social-menu{
+.contact__profile-social .social-menu {
   width: 75%;
 }
 
 .contact__profile-social {
-  margin: 40px  20px;
+  margin: 40px 20px;
   margin-bottom: 0;
   padding: 15px 0;
   background-color: #ffffff40;
   border-radius: 200px;
 }
+
 /*======================================
   Footer Section Style
 ========================================*/

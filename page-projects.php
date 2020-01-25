@@ -18,24 +18,25 @@
                 while ($project->have_posts()):
                     $project->the_post();
                     if(get_field('featured_post')):
-                        $post_tags =  get_the_tags();
             ?>    
                 <div class="featured-post">
                     <div class="featured-post__meta">
-                    <?php if ( $post_tags ):?>
-                        <div class='featured-post__meta-tags'>
-                        <?php foreach( $post_tags as $tag ) : ?>
-                            <span><?php echo $tag->name; ?></span>
-                        <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
+                        <?php 
+                            $post_tags =  get_the_tags(); 
+                                if ( $post_tags ):?>
+                            <div class='sp-post__meta-tags'>
+                                <?php foreach( $post_tags as $tag ) : ?>
+                                    <span><?php echo $tag->name; ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
                     <div class="featured-post__title">
                         <h2><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h2>
                     </div>
                     <div class="featured-post__content">
-                        <?php echo wp_trim_words(get_field('project_summary'), 24, ' ...') ?>
+                        <?php echo wp_trim_words(get_field('project_summary'), 26, ' ...') ?>
                     </div>
                 </div>
             <?php endif;  endwhile;  wp_reset_postdata(); ?>

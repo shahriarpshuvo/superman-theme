@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 
 <main class="blog">
-    <?php while(have_posts()): the_post(); ?>
+    <?php while(have_posts()): the_post(); 
+        
+    ?>
         <section class="container sp">
         <div class="sp-header">
             <h1 class="sp-header__title"><?php the_title(); ?></h1>
@@ -10,7 +12,9 @@
                 <?php echo get_the_time( 'd M, Y' ) ." | ".get_the_time( 'h:i A' ); ?> 
                 </div>
 
-                <?php if ( $post_tags ):?>
+                <?php 
+                    $post_tags =  get_the_tags(); 
+                        if ( $post_tags ):?>
                     <div class='sp-post__meta-tags'>
                     <?php foreach( $post_tags as $tag ) : ?>
                     <span><?php echo $tag->name; ?></span>
