@@ -173,6 +173,25 @@
                 "key": "field_5e2b7c2fbf7a0",
                 "label": "Project Summary",
                 "name": "project_summary",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": 180,
+                "rows": 4,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5e2c4b1ddbfd4",
+                "label": "Project Timeline",
+                "name": "project_timeline",
                 "type": "text",
                 "instructions": "",
                 "required": 1,
@@ -186,7 +205,52 @@
                 "placeholder": "",
                 "prepend": "",
                 "append": "",
-                "maxlength": 220
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e2c4b3edbfd5",
+                "label": "Project Link",
+                "name": "project_link",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e2c4b4ddbfd6",
+                "label": "Project Tools",
+                "name": "project_tools",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Adobe XD": "Adobe XD",
+                    "VS Code": "VS Code",
+                    "Java": "Java",
+                    "XML": "XML"
+                },
+                "allow_custom": 1,
+                "save_custom": 1,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "label"
             }
         ],
         "location": [
