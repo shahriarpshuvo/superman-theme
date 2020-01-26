@@ -1120,11 +1120,6 @@ header a.navbar-brand img {
   transform: translate(-50%, -185%);
 }
 
-@media (max-width:1000px) {
-  .contact__profile-img img {
-    transform: translate(-45%, -165%);
-  }
-}
 
 .contact__email {
   color: var(--color-accent);
