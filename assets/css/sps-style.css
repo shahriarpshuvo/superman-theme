@@ -283,7 +283,7 @@ button {
 .page-header,
 .sp-header {
   padding: 30px 0;
-  margin-top: 76px;
+  margin-top: 78px;
   text-align: center;
 }
 
@@ -367,6 +367,12 @@ header a.navbar-brand img {
 
 .nav-item a i {
   padding-right: 5px;
+}
+
+@media (max-width: 1024px){
+  .nav-item{
+    padding: 0 10px;
+  }
 }
 
 .navbar-light .navbar-toggler {
@@ -753,7 +759,7 @@ header a.navbar-brand img {
 
 
 .page-single__header {
-  margin-top: 65px;
+  margin-top: 60px;
   background-color: var(--color-main);
   margin-bottom: 40px;
   color: var(--color-light);
@@ -1182,19 +1188,24 @@ footer {
 }
 
 .subscriber-form {
-  width: 360px;
+  max-width: 50%;
   margin: auto;
   margin-bottom: 32px;
   position: relative;
+  text-align: center;
 }
 
 .subscriber-form input[type="email"] {
-  width: 360px;
-  padding: 10px;
+  width: 100%;
+  padding: 13px 10px;
   background-color: #07003b50;
   color: var(--color-accent);
   opacity: 1;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
+
 
 .subscriber-form input[type="email"]::placeholder {
   color: var(--color-accent);
@@ -1203,10 +1214,37 @@ footer {
 
 .subscriber-form button {
   position: absolute;
-  right: -18px;
-  top: 6.5px;
+  right: 8px;
+  top: 10px;
   padding: 7px 15px;
 }
+
+@media (max-width: 992px){
+
+  .subscriber-form {
+    max-width: 70%;
+  }  
+}
+
+
+@media (max-width: 772px){
+
+
+  .subscriber-form {
+    max-width: 80%;
+  } 
+
+}
+
+@media (max-width: 400px){
+
+
+  .subscriber-form {
+    max-width: 95%;
+  } 
+
+}
+
 
 .footer-menu {
   text-transform: lowercase;
@@ -1231,6 +1269,6 @@ footer {
   }
 
   .footer-bottom .row {
-    width: 80%;
+    width: 100%;
   }
 }

@@ -71,3 +71,11 @@ button#wpforms-submit-164 {
         text-align: center;
     }
 }
+
+
+.random-quote{
+    max-width: 80%;
+    font-size: 13px!important;
+    left: 50%;
+    transform: translateX(-50%);
+}
