@@ -73,6 +73,13 @@ button#wpforms-submit-164 {
 }
 
 
+div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
+	font-size: 14px;
+    color: var(--color-main);
+    font-weight: 600;
+}
+
+
 .random-quote{
     max-width: 80%;
     font-size: 13px!important;

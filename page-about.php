@@ -19,7 +19,7 @@
                 'posts_per_page' => -1,
                 'post_type' => 'about',
                 'orderby' => 'date',
-                'order' => 'DESC',
+                'order' => 'ASC',
                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
             )
         ); 
@@ -28,8 +28,6 @@
     <?php 
         while ($about->have_posts()):
             $about->the_post();
-            the_field('about_options');
-            echo "<br>";
             if(in_array( '0', get_field('about_options'))):
     ?>
 
@@ -68,7 +66,7 @@
                             <div class="col-9 mb-4">
                                 <h5 class="edu__org"><?php the_field('about_title'); ?></h5>
                                 <h6 class="edu__degree"><?php the_field('about_subtitle'); ?></h6>
-                                <p><?php the_field('about_timeline'); ?></p>
+                                <p class="font-weight-bold"><?php the_field('about_timeline'); ?></p>
 
                             </div>
 
@@ -180,14 +178,19 @@
                                 </div>
                             </div>
                             <div class="col-9 mb-5">
-                                <h5 class="card-info__title"><?php the_field('about_title')?>
+                                <h5 class="card-info__title"><?php the_field('about_title')?></h5>
+								<?php 
+                                    $about_tools =  get_field('about_tools');
+                                    foreach( $about_tools as $tool ) : ?>
+                                        <span class="card-info__tags"><?php echo $tool; ?></span>
                                 <?php 
+                                    endforeach; ?>
+								<?php 
                                     $about_tags =  get_field('about_tag');
                                     foreach( $about_tags as $tag ) : ?>
                                         <span class="card-info__tags"><?php echo $tag ?></span>
                                 <?php 
                                     endforeach; ?>
-                                </h5>
                                 <p class="card-info__summary"><?php the_field('about_summary') ?></p>
                                 <a class="card-info__link" href="<?php the_field('about_link') ?>" target="_blank">Learn More</a>
                             </div>
@@ -230,6 +233,7 @@
                                 <p class="card-info__summary">
                                     <?php the_field('about_summary'); ?>
                                 </p>
+								<a class="card-info__link" href="<?php the_field('about_link') ?>" target="_blank">Learn More</a>
                             </div>
                             
                             <?php   endif;
@@ -268,9 +272,11 @@
                                     endforeach; ?>
                                 </h5>
                                 <h6><?php the_field('about_timeline'); ?></h6>
+								<p class="font-weight-bold"><?php the_field('about_subtitle'); ?></p>
                                 <p class="card-info__summary">
                                     <?php the_field('about_summary'); ?>
                                 </p>
+								<a class="card-info__link" href="<?php the_field('about_link') ?>" target="_blank">Learn More</a>
                             </div>
 
                             <?php   endif;
